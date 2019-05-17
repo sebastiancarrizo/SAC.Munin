@@ -1,0 +1,25 @@
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyTitle("SAC.Munin.Shared")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SAC.Munin.Shared")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: ComVisible(false)]
+[assembly: Guid("48315754-a972-4dfa-94a1-e21662094ed0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: InternalsVisibleTo("SAC.Munin.Core.Domain")]
+[assembly: InternalsVisibleTo("SAC.Munin.Core.Domain.Query")]
+[assembly: InternalsVisibleTo("SAC.Munin.Core.Application")]
+[assembly: InternalsVisibleTo("SAC.Munin.Core.Data")]
+[assembly: InternalsVisibleTo("SAC.Stock.Front.MigrateDatabase")]
+[assembly: InternalsVisibleTo("SAC.Stock.Front.InitializeDatabase")]
+[assembly: InternalsVisibleTo("SAC.Munin.Front.WebSiteAdministration")]
+[assembly: InternalsVisibleTo("SAC.Munin.Front.WebSiteHabitant")]
+[assembly: InternalsVisibleTo("SAC.Munin.Front.WebSiteSecurityPoint")]

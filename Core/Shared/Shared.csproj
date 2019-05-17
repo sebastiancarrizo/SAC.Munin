@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48315754-A972-4DFA-94A1-E21662094ED0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAC.Munin</RootNamespace>
+    <AssemblyName>SAC.Munin.Core.Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SAC.Membership.Core.Shared">
+      <HintPath>..\..\..\SAC.Membership\Assemblies\SAC.Membership.Core.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.Core">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.NLayer.Core">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.NLayer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\BusinessRulesCode.cs" />
+    <Compile Include="Code\CodeConst.cs" />
+    <Compile Include="Code\SortQuery.cs" />
+    <Compile Include="Code\SpecFilter.cs" />
+    <Compile Include="Code\Tables\ApplicationTable.cs" />
+    <Compile Include="Code\Tables\AttributeTable.cs" />
+    <Compile Include="Code\Tables\AuthorizationTable.cs" />
+    <Compile Include="Code\Tables\GenderTable.cs" />
+    <Compile Include="Code\Tables\HabitantTypeTable.cs" />
+    <Compile Include="Code\Tables\LocationTypeTable.cs" />
+    <Compile Include="Code\Tables\RoleTable.cs" />
+    <Compile Include="Code\Tables\ScopeTable.cs" />
+    <Compile Include="Code\Tables\ServiceTypeTable.cs" />
+    <Compile Include="Code\Tables\StaffRoleTable.cs" />
+    <Compile Include="Code\Tables\TelcoTable.cs" />
+    <Compile Include="Code\Tables\HouseTypeTable.cs" />
+    <Compile Include="Code\UserName.cs" />
+    <Compile Include="Infrastructure\Logg.cs" />
+    <Compile Include="Infrastructure\Motification\EmailNotifier.cs" />
+    <Compile Include="Infrastructure\Motification\Settings.cs" />
+    <Compile Include="Infrastructure\SharedSettings.cs" />
+    <Compile Include="Infrastructure\UserDtoExtension.cs" />
+    <Compile Include="Infrastructure\ValidityToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BaseDto\AddressDto.cs" />
+    <Compile Include="Service\BaseDto\AttributeValueDto.cs" />
+    <Compile Include="Service\BaseDto\LocationDto.cs" />
+    <Compile Include="Service\LocationContext\ILocationApplicationService.cs" />
+    <Compile Include="Service\ProfileContext\ProfileDto.cs" />
+    <Compile Include="Service\ProfileContext\RolesCompositionDto.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

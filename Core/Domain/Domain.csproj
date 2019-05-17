@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D71595B9-5010-4AD0-9344-4DB496E0B019}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAC.Munin</RootNamespace>
+    <AssemblyName>SAC.Munin.Core.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Membership.Core.Shared">
+      <HintPath>..\..\..\SAC.Membership\Assemblies\SAC.Membership.Core.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.Core">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.Extend.Validator.DataAnnotations">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.Extend.Validator.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.NLayer.Core">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.NLayer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.NLayer.Extend.Data.EntityFramework">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.NLayer.Extend.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\AdministrationContext\Administration.cs" />
+    <Compile Include="Domain\AdministrationContext\AdministrationPhone.cs" />
+    <Compile Include="Domain\AdministrationContext\AdministrationStaff.cs" />
+    <Compile Include="Domain\AdministrationContext\Administrator.cs" />
+    <Compile Include="Domain\AttributeValueContext\AttributeValue.cs" />
+    <Compile Include="Domain\AttributeValueContext\AttributeValueAdapter.cs" />
+    <Compile Include="Domain\AttributeValueContext\AttributeValueService.cs" />
+    <Compile Include="Domain\GuestbookContext\Guestbook.cs" />
+    <Compile Include="Domain\LocationContext\Sector.cs" />
+    <Compile Include="Domain\LocationContext\SharedSpot.cs" />
+    <Compile Include="Domain\VehicleContext\Vehicle.cs" />
+    <Compile Include="Domain\VisitorContext\Authorization.cs" />
+    <Compile Include="Domain\VisitorContext\AuthorizedVisitor.cs" />
+    <Compile Include="Domain\VisitorContext\CasualVisitor.cs" />
+    <Compile Include="Domain\CompanyServicesContext\Company.cs" />
+    <Compile Include="Domain\CompanyServicesContext\CompanyPhone.cs" />
+    <Compile Include="Domain\CompanyServicesContext\CompanyStaff.cs" />
+    <Compile Include="Domain\CompanyServicesContext\ServiceType.cs" />
+    <Compile Include="Domain\GuardContext\Guard.cs" />
+    <Compile Include="Domain\HabitantContext\HabitantType.cs" />
+    <Compile Include="Domain\LocationContext\Address.cs" />
+    <Compile Include="Domain\LocationContext\Community.cs" />
+    <Compile Include="Domain\LocationContext\LivingPlace.cs" />
+    <Compile Include="Domain\LocationContext\Location.cs" />
+    <Compile Include="Domain\LocationContext\LocationAdapter.cs" />
+    <Compile Include="Domain\LocationContext\LocationService.cs" />
+    <Compile Include="Domain\LocationContext\LivingPlaceType.cs" />
+    <Compile Include="Domain\PersonContext\Person.cs" />
+    <Compile Include="Domain\PersonContext\PersonAttributeValue.cs" />
+    <Compile Include="Domain\PersonContext\PersonPhone.cs" />
+    <Compile Include="Domain\PhoneContext\Phone.cs" />
+    <Compile Include="Domain\PhoneContext\Telco.cs" />
+    <Compile Include="Domain\ProfileContext\Profile.cs" />
+    <Compile Include="Domain\ProfileContext\ProfileAdapter.cs" />
+    <Compile Include="Domain\ProfileContext\RolesComposition.cs" />
+    <Compile Include="Domain\HabitantContext\Habitant.cs" />
+    <Compile Include="Domain\StaffContext\Staff.cs" />
+    <Compile Include="Domain\VisitorContext\Visitor.cs" />
+    <Compile Include="Domain\VisitorContext\VisitorAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Query\Domain.Query.csproj">
+      <Project>{45abe538-f7ec-4cd7-b4a2-1873892dff0f}</Project>
+      <Name>Domain.Query</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{48315754-a972-4dfa-94a1-e21662094ed0}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

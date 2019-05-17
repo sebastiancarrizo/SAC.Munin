@@ -1,0 +1,50 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Devs\\VS\\SAC\\SAC.Munin\\Front\\AndroidClientGuard\\AndroidClientGuard.csproj": {}
+  },
+  "projects": {
+    "D:\\Devs\\VS\\SAC\\SAC.Munin\\Front\\AndroidClientGuard\\AndroidClientGuard.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Devs\\VS\\SAC\\SAC.Munin\\Front\\AndroidClientGuard\\AndroidClientGuard.csproj",
+        "projectName": "AndroidClientGuard",
+        "projectPath": "D:\\Devs\\VS\\SAC\\SAC.Munin\\Front\\AndroidClientGuard\\AndroidClientGuard.csproj",
+        "packagesPath": "C:\\Users\\crrxe\\.nuget\\packages\\",
+        "outputPath": "D:\\Devs\\VS\\SAC\\SAC.Munin\\Front\\AndroidClientGuard\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\crrxe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid81"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid81": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid81": {
+          "dependencies": {
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[27.0.2, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

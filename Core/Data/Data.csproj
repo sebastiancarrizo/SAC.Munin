@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A20BABCD-E25F-4B83-8BC1-AF7CBC9302DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAC.Munin</RootNamespace>
+    <AssemblyName>SAC.Munin.Core.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.Core">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.NLayer.Core">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.NLayer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SAC.Seed.NLayer.Extend.Data.EntityFramework">
+      <HintPath>..\..\..\SAC.Seed\Assemblies\SAC.Seed.NLayer.Extend.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Context\EntityTypeConfiguration\AdministratorConfiguration.cs" />
+    <Compile Include="Data\Context\EntityTypeConfiguration\AuthorizedVisitorConfiguration.cs" />
+    <Compile Include="Data\Context\EntityTypeConfiguration\CasualVisitorConfiguration.cs" />
+    <Compile Include="Data\Context\EntityTypeConfiguration\GuardConfiguration.cs" />
+    <Compile Include="Data\Context\EntityTypeConfiguration\HabitantConfiguration.cs" />
+    <Compile Include="Data\Context\EntityTypeConfiguration\StaffConfiguration.cs" />
+    <Compile Include="Data\Context\EntityTypeConfiguration\VisitorConfiguration.cs" />
+    <Compile Include="Data\Context\MuninContext.cs" />
+    <Compile Include="Data\Context\MuninContextCoreInitializer.cs" />
+    <Compile Include="Data\Migrations\MuninMigration.cs" />
+    <Compile Include="Migrations\201710022019280_InitialCreate.cs" />
+    <Compile Include="Migrations\201710022019280_InitialCreate.Designer.cs">
+      <DependentUpon>201710022019280_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710022046433_SharedSpot.cs" />
+    <Compile Include="Migrations\201710022046433_SharedSpot.Designer.cs">
+      <DependentUpon>201710022046433_SharedSpot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710091541410_SectorEntity.cs" />
+    <Compile Include="Migrations\201710091541410_SectorEntity.Designer.cs">
+      <DependentUpon>201710091541410_SectorEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710091553033_DescriptionFields.cs" />
+    <Compile Include="Migrations\201710091553033_DescriptionFields.Designer.cs">
+      <DependentUpon>201710091553033_DescriptionFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710100358094_VisitorAttribute.cs" />
+    <Compile Include="Migrations\201710100358094_VisitorAttribute.Designer.cs">
+      <DependentUpon>201710100358094_VisitorAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710102224046_VehicleAndGuestBookEntityes.cs" />
+    <Compile Include="Migrations\201710102224046_VehicleAndGuestBookEntityes.Designer.cs">
+      <DependentUpon>201710102224046_VehicleAndGuestBookEntityes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710102231326_LivingPlase.cs" />
+    <Compile Include="Migrations\201710102231326_LivingPlase.Designer.cs">
+      <DependentUpon>201710102231326_LivingPlase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710102240004_LivingPlaseType.cs" />
+    <Compile Include="Migrations\201710102240004_LivingPlaseType.Designer.cs">
+      <DependentUpon>201710102240004_LivingPlaseType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{d71595b9-5010-4ad0-9344-4db496e0b019}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{48315754-a972-4dfa-94a1-e21662094ed0}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710022019280_InitialCreate.resx">
+      <DependentUpon>201710022019280_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710022046433_SharedSpot.resx">
+      <DependentUpon>201710022046433_SharedSpot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710091541410_SectorEntity.resx">
+      <DependentUpon>201710091541410_SectorEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710091553033_DescriptionFields.resx">
+      <DependentUpon>201710091553033_DescriptionFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710100358094_VisitorAttribute.resx">
+      <DependentUpon>201710100358094_VisitorAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710102224046_VehicleAndGuestBookEntityes.resx">
+      <DependentUpon>201710102224046_VehicleAndGuestBookEntityes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710102231326_LivingPlase.resx">
+      <DependentUpon>201710102231326_LivingPlase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710102240004_LivingPlaseType.resx">
+      <DependentUpon>201710102240004_LivingPlaseType.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
